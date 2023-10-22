@@ -11,10 +11,18 @@ on:
 jobs:
   build:
     name: Test build
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Build
         run: |
           npm install
           npm run build
+      - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
+        # Only run on main branch push (e.g. after pull request merge).
+        if: github.event_name == 'push'
+        run: |
+          git config --global user.name "Github Actions"
+          git config --global user.email "bramn@users.noreply.github.com"
+          git commit -a -m "Build by Github Actions"
+          git push
