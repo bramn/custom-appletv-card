@@ -1,6 +1,7 @@
-name: "Build"
+name: "Validate HACS repo & build"
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - main
