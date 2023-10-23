@@ -173,7 +173,8 @@ export class AppleTVRemote extends LitElement {
           @action="${this._handleAction}"
           .actionHandler="${actionHandler({
             hasHold: button === 'home' || button === 'menu',
-          })}">
+          })}"
+        >
           <ha-icon icon="${icon}"></ha-icon>
         </ha-icon-button>
       `;
