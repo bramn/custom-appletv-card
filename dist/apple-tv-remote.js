@@ -259,12 +259,12 @@ found at http://polymer.github.io/PATENTS.txt
       </ha-card>
     `}_handleAction(e){if(this.hass&&this._config&&e.currentTarget&&e.currentTarget.button){const t=e.currentTarget.button,i=this._config.entity,n={tap_action:{action:"call-service",service:"remote.send_command",service_data:{entity_id:i,command:t}},hold_action:"home"===t||"menu"===t?{action:"call-service",service:"remote.send_command",service_data:{entity_id:i,command:"home"===t?"home_hold":"top_menu"}}:void 0};!function(e,t,i,n){var s;"double_tap"===n&&i.double_tap_action?s=i.double_tap_action:"hold"===n&&i.hold_action?s=i.hold_action:"tap"===n&&i.tap_action&&(s=i.tap_action),le(e,t,i,s)}(this,this.hass,n,e.detail.action)}}_renderButton(e,t,i){return this._config?j`
         <ha-icon-button
-          .button=${e}
-          title=${i}
-          @action=${this._handleAction}
-          .actionHandler=${_e({hasHold:"home"===e||"menu"===e})}
+          .button="${e}"
+          title="${i}"
+          @action="${this._handleAction}"
+          .actionHandler="${_e({hasHold:"home"===e||"menu"===e})}"
         >
-          <ha-icon icon=${t}></ha-icon>
+          <ha-icon icon="${t}"></ha-icon>
         </ha-icon-button>
       `:j``}showWarning(e){return j`
       <hui-warning>${e}</hui-warning>
