@@ -3,7 +3,7 @@ import { HomeAssistant, fireEvent, LovelaceCardEditor } from 'custom-card-helper
 
 import { AppleTVRemoteConfig } from './types';
 
-@customElement('apple-tv-remote-editor')
+@customElement('custom-apple-tv-remote-editor')
 export class AppleTVRemoteEditor extends LitElement implements LovelaceCardEditor {
   @property() public hass?: HomeAssistant;
   @property() private _config?: AppleTVRemoteConfig;

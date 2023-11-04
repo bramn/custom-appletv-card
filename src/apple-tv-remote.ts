@@ -37,7 +37,7 @@ export class AppleTVRemote extends LitElement {
   @property() private _config!: AppleTVRemoteConfig;
 
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
-    return document.createElement('apple-tv-remote-editor') as LovelaceCardEditor;
+    return document.createElement('custom-apple-tv-remote-editor') as LovelaceCardEditor;
   }
 
   public getCardSize(): number {
