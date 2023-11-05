@@ -160,18 +160,18 @@ class ActionHandler extends HTMLElement implements ActionHandler {
   }
 }
 
-customElements.define('action-handler-apple-tv-remote', ActionHandler);
+customElements.define('custom-action-handler-apple-tv-remote', ActionHandler);
 
 const getActionHandler = (): ActionHandler => {
   const body = document.body;
-  if (body.querySelector('action-handler-apple-tv-remote')) {
-    return body.querySelector('action-handler-apple-tv-remote') as ActionHandler;
+  if (body.querySelector('custom-action-handler-apple-tv-remote')) {
+    return body.querySelector('custom-action-handler-apple-tv-remote') as ActionHandler;
   }
 
-  const actionhandler = document.createElement('action-handler-apple-tv-remote');
-  body.appendChild(actionhandler);
+  const actionHandler = document.createElement('custom-action-handler-apple-tv-remote');
+  body.appendChild(actionHandler);
 
-  return actionhandler as ActionHandler;
+  return actionHandler as ActionHandler;
 };
 
 export const actionHandlerBind = (element: ActionHandlerElement, options: ActionHandlerOptions): void => {
