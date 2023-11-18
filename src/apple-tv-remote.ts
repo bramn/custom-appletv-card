@@ -26,12 +26,12 @@ console.info(
 
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'apple-tv-remote',
+  type: 'custom-apple-tv-remote',
   name: 'Apple TV Remote',
   description: 'A remote to control Apple TV',
 });
 
-@customElement('apple-tv-remote')
+@customElement('custom-apple-tv-remote')
 export class AppleTVRemote extends LitElement {
   @property() public hass!: HomeAssistant;
   @property() private _config!: AppleTVRemoteConfig;
