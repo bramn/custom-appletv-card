@@ -23,4 +23,6 @@ Add a new Resource to Home Assistant of type `module` and URL `/local/apple-tv-r
 Add as custom card using `type: custom:apple-tv-remote`, or using the Lovelace UI.
 
 This custom card for Lovelace dashboard, intends to mimick the look and feel of a real Apple TV remote (older generation) as depicted in below picture.
+
+#### Inspiration image
 ![Apple TV Remote](appletvremote1.jpg)
