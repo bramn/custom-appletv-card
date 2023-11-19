@@ -1,4 +1,4 @@
-name: "Validate HACS repo & build"
+name: "Build"
 
 on:
   workflow_dispatch:
@@ -10,14 +10,6 @@ on:
       - main
 
 jobs:
-  validate:
-    name: HACS validation
-    runs-on: ubuntu-latest
-    steps:
-      - uses: "hacs/action@main"
-        with:
-          category: "plugin"
-
   build:
     name: Build and commit
     runs-on: ubuntu-latest
