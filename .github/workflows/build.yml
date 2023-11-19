@@ -10,15 +10,19 @@ on:
       - main
 
 jobs:
+  validate:
+    name: HACS validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "hacs/action@main"
+        with:
+          category: "plugin"
+
   build:
     name: Build and commit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: HACS validation
-        uses: "hacs/action@main"
-        with:
-          category: "plugin"
       - name: Build
         run: |
           npm install
