@@ -5,7 +5,7 @@ A custom Lovelace card to control Apple TV from your Home Assistant dashboard.
 This custom card for Lovelace dashboard, intends to mimick the look and feel of a real Apple TV remote (older
 generation) as depicted in below picture.
 
-![Apple TV Remote](appletvremote1.jpg)
+<img title="Apple TV Remote" src="appletvremote1.jpg" />
 
 ## Action Options
 
